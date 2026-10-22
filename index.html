@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="description" content="Michiko Rooroh — Information Systems & Technology, IT governance, fintech, and digital projects.">
+    <title>Michiko – Information Systems & Technology</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div id="cur"></div>
+    <div id="ring"></div>
+
+    <header>
+        <div class="nav">
+            <!-- Teks Logo (Nanti akan diubah otomatis jadi "Good morning/afternoon" oleh JS) -->
+            <a class="logo" href="#hero">ActuallyNath<i></i></a>
+            
+            <!-- Menu Utama Desktop -->
+            <nav aria-label="Main">
+                <a href="#about">About</a>
+                <a href="#interests">Interests</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+            </nav>
+            
+            <!-- Tombol Ikon (Search & Theme) -->
+            <button class="ib" id="sbtn" aria-label="Search portfolio" title="Search ( / )">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            </button>
+            <button class="ib" id="tbtn" aria-label="Toggle light and dark mode">
+                <svg class="moon" viewBox="0 0 24 24"><path d="M21 13A9 9 0 1111 3a7 7 0 0010 10z"/></svg>
+                <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menu Mobile dipindah ke LUAR header agar tidak merusak kapsul navbar -->
+    <div class="mnav" aria-label="Mobile navigation">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+    </div>
+    
+    <main>
+        <div id="home">
+            <!-- HERO SECTION -->
+            <section id="hero">
+                <div id="bgCanvas"></div>
+                <div class="wrap hero-grid">
+                <div class="hero-text">
+                    <p class="hi">Information Systems & Technology Student</p>
+                     <h1><span id="typewriter"></span><span class="typed-cursor">|</span></h1>
+                      <p class="sub">Bridging enterprise IT governance, system architecture, cybersecurity, and software development.</p>
+                      <div class="btns">
+                <a class="btn p" href="#projects">Explore Projects</a>
+                <a class="btn s" id="resume" href="assets/Michiko-Resume.pdf" download="Michiko-Resume.pdf">Download Resume</a>
+            </div>
+        </div>
+
+                    <!-- FOTO HERO (REFLECTIVE CARD TEMPLATE) -->
+                    <div class="hero-image">
+                        <!-- INTERACTIVE REFLECTIVE PROFILE CARD -->
+<div
+    class="reflective-card"
+    id="profileCard"
+    aria-label="Profile photo"
+    data-tilt-strength="12"
+    data-glare="0.5"
+    data-shine="1"
+    data-grayscale="0"
+    data-warp="0.6"
+    data-bevel="3"
+    data-radius="24"
+    data-intro="true"
+>
+    <div class="reflective-card__body">
+        <img
+            src="assets/profile.png"
+            alt="Michiko's profile photo"
+            class="reflective-card__photo"
+        >
+
+        <!-- Dynamic reflection -->
+        <div
+            class="reflective-card__glare"
+            aria-hidden="true"
+        ></div>
+
+        <!-- Decorative border -->
+        <div
+            class="reflective-card__rim"
+            aria-hidden="true"
+        ></div>
+    </div>
+</div>
+            </section>
+            
+            <!-- ABOUT SECTION -->
+            <section id="about">
+                <div class="wrap">
+                    <div class="sh"><h2>About me</h2></div>
+                    <div class="about">
+                        <p>I study <b>Information Systems & Technology at Cyber University</b> with a <b>3.88 GPA</b>, and I like the space where business strategy meets the systems that run it.</p>
+                        <p>I’ve worked inside enterprise <b>IT governance</b>: writing SOPs, modeling processes, and presenting application portfolios to executives. Outside work, I build gamified apps and run student communities.</p>
+                        
+
+                    </div>
+                </div>
+            </section>
+            
+            <!-- INTERESTS SECTION -->
+            <section id="interests" class="reveal-section">
+                <div class="wrap">
+                    <div class="sh">
+                        <span class="exp-subtitle">A LITTLE ABOUT ME</span>
+                        <h2>Interests</h2>
+                        <p>What I enjoy, what I focus on, and how to reach me.</p>
+                    </div>
+
+                    <div class="interests-grid">
+                        <!-- Card 1: My Picture -->
+                        <article class="interest-card interest-picture" aria-label="My picture">
+                            <div class="interest-picture__image-wrap">
+                                <img src="assets/me.jpeg" alt="Portrait of Michiko Rooroh" loading="lazy">
+                            </div>
+                        </article>
+
+                        <!-- Card 2: Contact Form -->
+                        <article class="interest-card interest-contact">
+                            <div class="interest-card__content">
+                                <span class="interest-card__eyebrow">02 / CONTACT</span>
+                                <h3>Leave Your Details</h3>
+                                <p>Have a project, collaboration, or opportunity in mind? Leave a few details below.</p>
+                                <form id="contactForm" class="interest-form">
+                                    <label for="contactName">Name</label>
+                                    <input id="contactName" name="name" type="text" placeholder="Your full name" autocomplete="name" required>
+
+                                    <label for="contactEmail">Email</label>
+                                    <input id="contactEmail" name="email" type="email" placeholder="name@example.com" autocomplete="email" required>
+
+                                    <label for="contactReason">Reason for reaching out</label>
+                                    <select id="contactReason" name="reason" required>
+                                        <option value="" disabled selected>Select a reason</option>
+                                        <option value="Project collaboration">Project collaboration</option>
+                                        <option value="Professional opportunity">Professional opportunity</option>
+                                        <option value="Campus or community">Campus or community</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+
+                                    <label for="contactMessage">Message</label>
+                                    <textarea id="contactMessage" name="message" rows="3" placeholder="A few words..." required></textarea>
+
+                                    <button class="interest-form__submit" type="submit">Prepare message <span aria-hidden="true">↗</span></button>
+                                    <p class="interest-form__note" id="contactFormNote">Your email app will open so you can review and send the message.</p>
+                                </form>
+                            </div>
+                        </article>
+
+                        <!-- Card 3: Existing Interests Folder -->
+                        <article class="interest-card interest-folder-card">
+                            <div class="interest-card__content">
+                                <span class="interest-card__eyebrow">03 / EXPLORE</span>
+                                <h3>My Focus Areas</h3>
+                                <p>Open the folder to explore topics I’m interested in.</p>
+                                <div class="interests-container">
+                                    <div id="folderFloat" class="folder-float">
+                                        <div class="folder-float__items" id="folderItems"></div>
+                                        <div class="folder-float__folder">
+                                            <span class="folder-float__back" aria-hidden="true"></span>
+                                            <span class="folder-float__paper" aria-hidden="true"></span>
+                                            <span class="folder-float__front" aria-hidden="true">
+                                                <span class="folder-float__label">Interests &amp; Focus</span>
+                                                <span class="folder-float__sub" id="folderSub">5 topics</span>
+                                            </span>
+                                            <button type="button" class="folder-float__trigger" id="folderTrigger" aria-label="Toggle interests folder" aria-expanded="false"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- TIMELINE EXPERIENCE & RECOGNITION -->
+<section id="experience" class="reveal-section">
+    <div class="wrap">
+        <div class="sh">
+            <span class="exp-subtitle">THE JOURNEY / SELECTED HIGHLIGHTS</span>
+            <h2>My journey</h2>
+            <p>Experience, competitions & leadership.</p>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <!-- Item 1: System Analyst Intern (Kiri) -->
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">APRIL – OKTOBER 2026</span>
+                    <h3>System Analyst Intern</h3>
+                    <p class="timeline-org">Bank Raya Indonesia Tbk.</p>
+                    <p class="timeline-desc">Updated enterprise governance standards to define clear engineering and procurement guidelines, reducing cross-divisional handoff bottlenecks.</p>
+                    <div class="timeline-tags">SDLC workflow · Application criticality · Incident reporting</div>
+                </div>
+            </div>
+
+            <!-- Item 2: Mini Brent Trading Competition (Kanan) -->
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">DESEMBER 2025 – AGUSTUS 2026</span>
+                    <h3>Mini Brent Trading Competition</h3>
+                    <p class="timeline-org">PT Bursa Berjangka Jakarta (JFX)</p>
+                    <p class="timeline-desc">Won 2nd Place in the national JFX University Competition for futures portfolio trading in Minibrent crude oil contracts.</p>
+                    <div class="timeline-tags">2nd Place National · Futures Trading</div>
+                </div>
+            </div>
+
+            <!-- Item 3: International Fintech Hackathon (Kiri) -->
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">SEPTEMBER 2025 – FEBRUARI 2026</span>
+                    <h3>International Fintech Hackathon</h3>
+                    <p class="timeline-org">Universiti Teknologi PETRONAS × Cyber University</p>
+                    <p class="timeline-desc">Won 2nd Runner-Up for co-developing "XPVEST", a web gamified investment simulation application.</p>
+                    <div class="timeline-tags">2nd Runner-Up · Malaysia · XPVEST</div>
+                </div>
+            </div>
+
+            <!-- Item 4: Head of English Club (Kanan) -->
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2025 / 2026 ACADEMIC TERM</span>
+                    <h3>Head of English Club</h3>
+                    <p class="timeline-org">Cyber University</p>
+                    <p class="timeline-desc">Directed the organizing committee of 'ECTION 2.0' and led diverse teams, increasing membership by ~80 active members.</p>
+                    <div class="timeline-tags">71+ Active Members · Leadership · ECTION 2.0</div>
+                </div>
+            </div>
+
+            <!-- Item 5: BNSP Junior Cyber Security (Kiri) -->
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">CERTIFICATION</span>
+                    <h3>Junior Cyber Security</h3>
+                    <p class="timeline-org">Badan Nasional Sertifikasi Profesi (BNSP)</p>
+                    <p class="timeline-desc">Certified competency in web application security, cryptography, network security, and access control mechanisms.</p>
+                    <div class="timeline-tags">BNSP Certified · Security Governance</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            
+            <!-- PROJECTS SECTION -->
+            <section id="projects" class="reveal-section">
+    <div class="wrap">
+        <div class="sh">
+            <span class="exp-subtitle">PORTFOLIO / CREATIVE WORKS</span>
+            <h2>Projects</h2>
+            <p>Interactive works & case studies.</p>
+        </div>
+
+        <!-- ChromaGrid Container -->
+        <div class="chroma-grid" id="chromaGrid">
+            <!-- Diisi otomatis oleh JavaScript berdasarkan data PROJ -->
+        </div>
+    </div>
+</section>
+            
+
+        </div>
+</main>
+
+    <!-- FLOATING MINIMALIST SOCIAL SIDEBAR -->
+    <div class="social-sidebar">
+        <a href="mailto:nathaniamilla@gmail.com" target="_blank" rel="noopener" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+        <a href="https://linkedin.com/in/michiko-natha" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="https://github.com/actuallynathh" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <div class="social-sidebar-line"></div>
+    </div>
+
+    <footer>© 2026 Michiko. All rights reserved.</footer>
+    
+    <div id="srch" role="dialog" aria-label="Search">
+        <div class="sb">
+            <div class="sin">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+                <input id="q" type="search" placeholder="Search projects, experience, interests, tags…" autocomplete="off">
+                <button class="ib" id="sx" aria-label="Close search">✕</button>
+            </div>
+            <div class="chips" id="chips"></div>
+            <div class="res" id="res"></div>
+        </div>
+    </div>
+</div>
+    
+    <!-- THREE.JS CDN FOR COLORBENDS BACKGROUND -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
